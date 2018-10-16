@@ -7,15 +7,10 @@ def summon_captain_planet(arr)
   end
 
 def long_planeteer_calls(arr)
-  if arr.size>=4
-    return TRUE
-  else
-    return FALSE
-  end
-  end
+  arr.any? {|x| x.length > 4}
+end
 
 def find_the_cheese(arr)
   cheese_types = ["cheddar", "gouda", "camembert"]
-  k = cheese_types.select {|x| x if arr.include?x }
-  arr.find {|n| k.include?n}
+  arr.find {|x| cheese_types.include?(x)}
 end
