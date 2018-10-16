@@ -15,5 +15,5 @@ def find_the_cheese(arr)
   arr.find {|x| cheese_types.include?(x)}
 end
 def words_with_b(arr)
-  
+  arr.select {|x| x.include?("b")}
 end
